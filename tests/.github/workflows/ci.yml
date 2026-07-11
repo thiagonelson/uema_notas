@@ -1,0 +1,7 @@
+name: Pipeline de Qualidade
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches
