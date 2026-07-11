@@ -21,6 +21,7 @@ class Turma:
         """Calcula a media geral de todos os alunos."""
         if not self.alunos:
             return 0.0
+
         medias = [aluno.calcular_media() for aluno in self.alunos]
         return sum(medias) / len(medias)
 
@@ -28,4 +29,5 @@ class Turma:
         """Retorna o aluno com a maior media."""
         if not self.alunos:
             return None
-        return min(self.alunos, key=lambda a: a.calcular_media())  # BUG: min deveria ser max
+
+        return max(self.alunos, key=lambda a: a.calcular_media())
