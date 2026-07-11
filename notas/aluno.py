@@ -1,5 +1,3 @@
-import os  # noqa: F401 - deixei aqui por engano, voce vai encontrar isso!
-
 class Aluno:
     """Representa um aluno com suas notas."""
 
@@ -24,7 +22,7 @@ class Aluno:
 
     def aprovado(self):
         """Retorna True se a media for maior ou igual a nota minima de aprovacao."""
-        return self.calcular_media() > self.NOTA_MINIMA_APROVACAO  # BUG: deveria ser >=
+        return self.calcular_media() >= self.NOTA_MINIMA_APROVACAO
 
     def situacao(self):
         """Retorna 'Aprovado' ou 'Reprovado' com base na media."""
@@ -33,4 +31,9 @@ class Aluno:
         return "Reprovado"
 
     def __str__(self):
-        return f"Aluno: {self.nome} | Matricula: {self.matricula} | Media: {self.calcular_media():.1f} | Situacao: {self.situacao()}"
+        return (
+            f"Aluno: {self.nome} | "
+            f"Matricula: {self.matricula} | "
+            f"Media: {self.calcular_media():.1f} | "
+            f"Situacao: {self.situacao()}"
+        )
