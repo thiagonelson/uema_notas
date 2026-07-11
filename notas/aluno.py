@@ -21,7 +21,7 @@ class Aluno:
         return sum(self.notas) / len(self.notas)
 
     def aprovado(self):
-        """Retorna True se a media for maior ou igual a nota minima de aprovacao."""
+        """Retorna True se a media for maior ou igual a nota minima."""
         return self.calcular_media() >= self.NOTA_MINIMA_APROVACAO
 
     def situacao(self):
