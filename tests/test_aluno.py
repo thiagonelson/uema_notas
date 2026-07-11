@@ -71,3 +71,15 @@ def test_situacao_reprovado():
     aluno = Aluno("Carlos", "2024011")
     aluno.adicionar_nota(3.0)
     assert aluno.situacao() == "Reprovado"
+
+
+def test_str_aluno():
+    aluno = Aluno("Maria", "2024001")
+    aluno.adicionar_nota(8.0)
+
+    texto = str(aluno)
+
+    assert texto == (
+        "Aluno: Maria | Matricula: 2024001 | "
+        "Media: 8.0 | Situacao: Aprovado"
+    )
