@@ -1,0 +1,3 @@
+git add .
+git commit -m "ci: adiciona pipeline de qualidade"
+git push origin main
